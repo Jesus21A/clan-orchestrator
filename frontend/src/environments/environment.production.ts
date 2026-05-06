@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'clan-orchestrator-production.up.railway.app'
+  apiUrl: 'https://clan-orchestrator-production.up.railway.app/api/v1'
 };
