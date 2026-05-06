@@ -1,0 +1,82 @@
+:host { display: block; }
+
+.exec-shell {
+  min-height: 100vh; background: #f5f5f3;
+  padding: 1.5rem; font-family: 'DM Sans', system-ui, sans-serif;
+  display: flex; flex-direction: column; gap: 1.25rem;
+}
+
+.exec-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fff; border: 1px solid #e8e6e0;
+  border-radius: 16px; padding: 1.25rem 1.5rem;
+
+  &__brand { display: flex; align-items: center; gap: 14px; }
+  .icon { font-size: 1.75rem; color: #1a56db; }
+  h1 { font-size: 1.2rem; font-weight: 700; color: #111; margin: 0; }
+  p  { font-size: 0.78rem; color: #888; margin: 0; }
+}
+
+.btn-back {
+  padding: 0.5rem 1rem; background: transparent;
+  border: 1px solid #ddd; border-radius: 10px;
+  font-size: 0.82rem; color: #444; cursor: pointer;
+  &:hover { background: #f5f5f3; }
+}
+
+/* ── Clan cards ── */
+.clan-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.clan-card {
+  background: #fff; border: 1px solid #e8e6e0;
+  border-radius: 14px; padding: 1.25rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+
+  &.has-blocked { border-color: #fca5a5; }
+
+  &__name { font-size: 0.82rem; font-weight: 700; color: #111; }
+
+  &__qbr {
+    display: flex; align-items: baseline; gap: 6px;
+    .label { font-size: 0.7rem; color: #888; }
+  }
+
+  &__bar {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+
+  &__stats {
+    display: flex; justify-content: space-between;
+    font-size: 0.72rem; color: #888;
+  }
+}
+
+.big-num {
+  font-size: 2rem; font-weight: 700; line-height: 1;
+  &--ok   { color: #276749; }
+  &--warn { color: #b7791f; }
+  &--risk { color: #c53030; }
+}
+
+.bar-track {
+  height: 6px; background: #f0f0ee;
+  border-radius: 99px; overflow: hidden;
+}
+.bar-fill {
+  height: 100%; background: #1a56db;
+  border-radius: 99px; transition: width 0.3s;
+  &.fill--ok { background: #276749; }
+}
+.bar-label { font-size: 0.7rem; color: #888; }
+
+.blocked-badge {
+  background: #fff5f5; color: #c53030;
+  padding: 1px 7px; border-radius: 99px;
+  font-size: 0.68rem; font-weight: 600;
+}
+
+.exec-ai { max-width: 700px; }

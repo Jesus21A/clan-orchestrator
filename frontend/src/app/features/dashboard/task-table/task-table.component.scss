@@ -1,0 +1,282 @@
+:host { display: block; }
+
+.table-card {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+  border-radius: 16px;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0ee;
+  }
+}
+
+.header-left { display: flex; align-items: center; gap: 10px; }
+.header-right { display: flex; align-items: center; gap: 8px; }
+
+h2 { font-size: 0.95rem; font-weight: 600; color: #111; margin: 0; }
+
+.count-badge {
+  font-size: 0.72rem; color: #999;
+  background: #f5f5f3; padding: 3px 10px; border-radius: 99px;
+}
+
+.btn-ghost {
+  padding: 0.4rem 0.85rem;
+  background: transparent; color: #666;
+  border: 1px solid #ddd; border-radius: 8px;
+  font-size: 0.78rem; cursor: pointer;
+  &:hover { background: #f5f5f3; }
+}
+
+.btn-new {
+  padding: 0.45rem 1rem;
+  background: #1a56db; color: #fff;
+  border: none; border-radius: 8px;
+  font-size: 0.8rem; font-weight: 600;
+  cursor: pointer;
+  &:hover { background: #1447b8; }
+}
+
+/* ── Clan groups ── */
+.clan-groups { border-top: 1px solid #f0f0ee; }
+
+.clan-group { border-bottom: 1px solid #f0f0ee; &:last-child { border-bottom: none; } }
+
+.clan-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer; user-select: none;
+  background: #fafaf8;
+  transition: background 0.1s;
+
+  &:hover { background: #f5f5f3; }
+
+  &__left { display: flex; align-items: center; gap: 10px; }
+  &__right { display: flex; align-items: center; gap: 8px; }
+}
+
+.clan-chevron { font-size: 0.6rem; color: #bbb; width: 12px; }
+
+.clan-name { font-size: 0.85rem; font-weight: 600; color: #222; }
+
+.clan-badges { display: flex; gap: 5px; }
+
+.mini-badge {
+  font-size: 0.65rem; font-weight: 600;
+  padding: 2px 7px; border-radius: 99px;
+
+  &--total   { background: #f0f0ee; color: #666; }
+  &--blocked { background: #fff5f5; color: #c53030; }
+  &--qbr     { background: #ebf4ff; color: #1a56db; }
+}
+
+.clan-progress-bar {
+  width: 80px; height: 5px;
+  background: #e8e6e0; border-radius: 99px; overflow: hidden;
+
+  &__fill {
+    height: 100%; background: #1a56db; border-radius: 99px;
+    transition: width 0.3s;
+  }
+}
+
+.clan-avg { font-size: 0.72rem; color: #888; min-width: 30px; text-align: right; }
+
+.clan-body table { border-top: none; }
+
+/* ── Form ── */
+.task-form {
+  padding: 1.25rem 1.5rem;
+  background: #fafaf8;
+  border-bottom: 1px solid #f0f0ee;
+
+  &__title {
+    font-size: 0.85rem; font-weight: 600; color: #111;
+    margin-bottom: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem 1rem;
+  }
+
+  &__actions {
+    display: flex; gap: 8px; margin-top: 1rem;
+  }
+}
+
+.field {
+  display: flex; flex-direction: column; gap: 4px;
+
+  &--wide { grid-column: span 2; }
+
+  label {
+    font-size: 0.7rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    color: #888;
+  }
+
+  input, select {
+    padding: 0.45rem 0.65rem;
+    border: 1px solid #e0e0dc;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #222;
+    background: #fff;
+    font-family: inherit;
+    &:focus { outline: none; border-color: #1a56db; }
+  }
+
+  input[type="range"] {
+    padding: 0; border: none; background: none;
+    accent-color: #1a56db;
+  }
+
+  textarea {
+    padding: 0.45rem 0.65rem;
+    border: 1px solid #e0e0dc;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #222;
+    background: #fff;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 60px;
+    &:focus { outline: none; border-color: #1a56db; }
+  }
+}
+
+.toggle {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.82rem; color: #333; cursor: pointer;
+  input { width: auto; }
+}
+
+.btn-save {
+  padding: 0.5rem 1.2rem;
+  background: #1a56db; color: #fff;
+  border: none; border-radius: 8px;
+  font-size: 0.82rem; font-weight: 600; cursor: pointer;
+  &:hover:not(:disabled) { background: #1447b8; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+.btn-cancel {
+  padding: 0.5rem 1rem;
+  background: transparent; color: #666;
+  border: 1px solid #ddd; border-radius: 8px;
+  font-size: 0.82rem; cursor: pointer;
+  &:hover { background: #f5f5f3; }
+}
+
+/* ── Table ── */
+.empty-state {
+  padding: 3rem 2rem; text-align: center; color: #bbb;
+  &__icon { font-size: 2.5rem; margin-bottom: 0.75rem; opacity: 0.4; }
+  p { font-size: 0.85rem; }
+}
+
+.table-wrapper { overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+
+thead {
+  background: #fafaf8;
+  th {
+    padding: 0.6rem 1rem;
+    text-align: left; font-size: 0.68rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em; color: #aaa;
+    border-bottom: 1px solid #f0f0ee;
+    white-space: nowrap;
+    &.center { text-align: center; }
+  }
+}
+
+tbody {
+  td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #f5f5f3;
+    color: #222; vertical-align: middle;
+    &.center { text-align: center; }
+    &.actions { white-space: nowrap; }
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafaf8; }
+  tr.row--blocked td { background: #fff8f8; }
+  tr.row--editing td { background: #f0f5ff; }
+}
+
+.task-name { font-weight: 500; }
+.task-dep  { font-size: 0.7rem; color: #c53030; margin-top: 2px; }
+.task-notes {
+  font-size: 0.7rem; color: #888; margin-top: 3px;
+  max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.task-period {
+  display: inline-block; margin-top: 3px;
+  font-size: 0.65rem; font-weight: 600;
+  background: #ebf4ff; color: #1a56db;
+  padding: 1px 6px; border-radius: 99px;
+}
+.sparkline { display: block; margin-top: 3px; }
+.text-muted { color: #888; font-size: 0.78rem; }
+.overdue { color: #c53030 !important; font-weight: 600; }
+
+/* ── Progress bar ── */
+.progress-wrap {
+  display: flex; align-items: center; gap: 6px; min-width: 100px;
+}
+.progress-bar {
+  flex: 1; height: 6px; background: #f0f0ee; border-radius: 99px; overflow: hidden;
+
+  &__fill {
+    height: 100%; background: #1a56db; border-radius: 99px;
+    transition: width 0.3s;
+    &.fill--done { background: #276749; }
+    &.fill--warn { background: #c53030; }
+  }
+}
+.progress-pct { font-size: 0.7rem; color: #888; white-space: nowrap; }
+
+/* ── Badges & icons ── */
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 3px 9px; border-radius: 99px;
+  font-size: 0.68rem; font-weight: 600; white-space: nowrap;
+
+  &--clan      { background: #f0f0ee; color: #555; }
+  &--completed { background: #f0fff4; color: #276749; }
+  &--progress  { background: #ebf4ff; color: #1a56db; }
+  &--blocked   { background: #fff5f5; color: #c53030; }
+  &--neutral   { background: #f5f5f3; color: #888; }
+}
+
+.qbr-dot {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; background: #1a56db;
+}
+
+.priority {
+  display: inline-block; width: 22px; height: 22px;
+  line-height: 22px; text-align: center;
+  border-radius: 6px; font-size: 0.73rem; font-weight: 700;
+  &--5 { background: #fff5f5; color: #c53030; }
+  &--4 { background: #fffbeb; color: #b7791f; }
+  &--3 { background: #ebf4ff; color: #1a56db; }
+  &--2 { background: #f0fff4; color: #276749; }
+  &--1 { background: #f5f5f3; color: #888; }
+}
+
+.icon-btn {
+  background: none; border: none;
+  padding: 4px 6px; border-radius: 6px;
+  cursor: pointer; color: #888; font-size: 0.9rem;
+  &:hover { background: #f0f0ee; color: #333; }
+  &--danger:hover { background: #fff5f5; color: #c53030; }
+}

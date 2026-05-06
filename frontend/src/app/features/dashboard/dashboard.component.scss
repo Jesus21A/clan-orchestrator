@@ -1,0 +1,148 @@
+:host { display: block; }
+
+.dashboard-shell {
+  min-height: 100vh;
+  background: #f5f5f3;
+  padding: 1.5rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e8e6e0;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__icon {
+    font-size: 1.75rem;
+    color: #1a56db;
+    line-height: 1;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-size: 0.78rem;
+    color: #888;
+    margin: 0;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.qbr-label { font-size: 0.75rem; font-weight: 600; color: #888; }
+.qbr-select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #e0e0dc; border-radius: 8px;
+  font-size: 0.8rem; color: #333; background: #fff;
+  font-family: inherit; cursor: pointer;
+  &:focus { outline: none; border-color: #1a56db; }
+}
+
+.user-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: #f5f5f3; border-radius: 10px; padding: 0.3rem 0.6rem;
+  &__name { font-size: 0.78rem; font-weight: 600; color: #333; }
+}
+.btn-logout {
+  font-size: 0.72rem; color: #888; background: none;
+  border: none; cursor: pointer; padding: 0;
+  &:hover { color: #c53030; }
+}
+
+.btn {
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &--ghost {
+    background: transparent;
+    border-color: #ddd;
+    color: #444;
+    &:hover { background: #f5f5f3; }
+  }
+
+  &--primary {
+    background: #1a56db;
+    color: #fff;
+    &:hover { background: #1447b8; }
+  }
+}
+
+.content-grid {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+
+  &__main { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  &__sidebar {
+    position: sticky;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.resize-handle {
+  width: 6px;
+  min-height: 200px;
+  cursor: col-resize;
+  border-radius: 4px;
+  background: transparent;
+  margin-right: 8px;
+  flex-shrink: 0;
+  transition: background 0.15s;
+  align-self: stretch;
+
+  &:hover, &:active {
+    background: #1a56db33;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: #d0d0cc;
+    border-radius: 2px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

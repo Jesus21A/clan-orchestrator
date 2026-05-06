@@ -1,0 +1,46 @@
+:host { display: block; margin-bottom: 1.25rem; }
+
+.graph-panel {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+  border-radius: 16px;
+  overflow: hidden;
+
+  &__header {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid #f0f0ee;
+    background: #fafaf8;
+
+    h3 { font-size: 0.9rem; font-weight: 600; color: #111; margin: 0; flex-shrink: 0; }
+  }
+}
+
+.legend {
+  display: flex; gap: 1rem; flex-wrap: wrap; flex: 1;
+}
+.legend-item {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.72rem; color: #666;
+}
+.legend-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+
+.close-btn {
+  background: none; border: none; cursor: pointer;
+  color: #999; font-size: 1rem; padding: 4px 8px;
+  border-radius: 6px; margin-left: auto;
+  &:hover { background: #f0f0ee; color: #333; }
+}
+
+.graph-scroll { overflow-x: auto; padding: 1rem; }
+
+.graph-svg { display: block; }
+
+.node { cursor: default; }
+.node-id { font-family: monospace; }
+.node-title {
+  font-size: 10px; color: #444; line-height: 1.3;
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}

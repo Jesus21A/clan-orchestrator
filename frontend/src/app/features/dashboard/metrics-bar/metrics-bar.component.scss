@@ -1,0 +1,53 @@
+:host { display: block; margin-bottom: 1.25rem; }
+
+.metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.metric-card {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &__label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #999;
+  }
+
+  &__value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: -0.03em;
+    line-height: 1;
+
+    &--blue    { color: #1a56db; }
+    &--danger  { color: #c53030; }
+    &--warning { color: #b7791f; }
+  }
+
+  &__bar {
+    height: 4px;
+    background: #f0f0ee;
+    border-radius: 99px;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.4s ease;
+
+    &--blue { background: #1a56db; }
+  }
+}

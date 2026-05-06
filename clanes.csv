@@ -1,0 +1,14 @@
+task_id,title,clan_owner,status,is_qbr,priority_level,dependency_id,effort_estimated
+MF_001,Analisis Riesgo Sector Agro,Microfinanzas,Completed,true,5,,16
+MF_002,Desembolso Creditos Grupales,Microfinanzas,In Progress,true,4,MF_001,24
+PROD_001,Lanzamiento Cartera Hipotecaria,Productos y Otras Carteras,In Progress,true,5,,40
+PROD_002,Revision Tasas Libre Inversion,Productos y Otras Carteras,Not Started,false,3,,8
+REM_001,Upgrade API Corresponsales,Remesas,Blocked,true,4,PETI_002,12
+REM_002,Conciliacion Diaria Automatizada,Remesas,In Progress,false,2,,10
+ADM_001,Auditoria Riesgo Legal Q2,Administrativo + Riesgo Legal,Completed,true,5,,20
+ADM_002,Renovacion Contratos Proveedores Cloud,Administrativo + Riesgo Legal,In Progress,false,3,,15
+INN_001,Piloto Billetera Digital,Innovaciones Canales y Datos,Blocked,true,5,REM_001,32
+INN_002,Limpieza Data Lake (ETL),Innovaciones Canales y Datos,In Progress,false,2,,18
+PETI_001,Plan Recuperacion Desastres (DRP),PETI,Completed,true,5,,40
+PETI_002,Migración Servidores Legacy,PETI,Blocked,true,5,ADM_002,60
+PETI_003,Update Directorio Activo,PETI,Not Started,false,1,,4
